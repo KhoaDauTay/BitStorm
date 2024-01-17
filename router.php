@@ -7,7 +7,7 @@ $role_id = $userprofile->get_role_id();
 
 // Lấy đường dẫn URL sau localhost
 $requestUri = $_SERVER['REQUEST_URI']; // BitStorm/adminUser
-$baseUrl = 'BitStorm/'; // Đường dẫn gốc của ứng dụng
+$baseUrl = '/'; // Đường dẫn gốc của ứng dụng
 
 // Xóa đường dẫn gốc khỏi URL để chỉ lấy phần đường dẫn tương đối
 $relativePath = str_replace($baseUrl, '', $requestUri); // /adminUser
@@ -18,7 +18,7 @@ $parts = explode('/', $relativePath); // [adminUser]
 // Kiểm tra xem đường dẫn tương đối có rỗng hay không
 if ($relativePath === '') {
     // Gọi controller home
-    require_once("/BitStorm/Controller/HomeController.php");
+    require_once("Controller/HomeController.php");
     $controller = new HomeController();
     $controller->index();
     exit();

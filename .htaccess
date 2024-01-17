@@ -1,6 +1,13 @@
 RewriteEngine On
-RewriteBase /BitStorm/
+RewriteBase /BitStorm
 
+# Prevent rewrite rules for existing files/folders
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Main entry points
+RewriteRule ^index$ index.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ Controller/$1Controller.php [L]
+RewriteRule ^(.+)$ Controller/$1Controller.php [L]

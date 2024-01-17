@@ -1,5 +1,5 @@
 <?php
-include_once("../Model/BlogModel.php");
+include_once("BlogModel.php");
 
 class Account
 {

@@ -8,7 +8,7 @@ $role_id = $userprofile->get_role_id();
 // Lấy đường dẫn URL sau localhost
 $requestUri = $_SERVER['REQUEST_URI']; // BitStorm/adminUser
 echo $requestUri;
-$baseUrl = 'BitStorm/'; // Đường dẫn gốc của ứng dụng
+$baseUrl = '/'; // Đường dẫn gốc của ứng dụng
 
 // Xóa đường dẫn gốc khỏi URL để chỉ lấy phần đường dẫn tương đối
 $relativePath = str_replace($baseUrl, '', $requestUri); // /adminUser

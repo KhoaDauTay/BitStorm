@@ -1,9 +1,9 @@
 <?php
-include "../Config/config.php";
+include "Config/config.php";
 class Connection{
     protected  $host = DB_HOST ;
     protected $username = DB_USER;
-    protected $password = '';
+    protected $password = DB_PASS;
     protected $dbName = DB_NAME;
     protected $conn;
     public function connect_database()

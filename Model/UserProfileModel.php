@@ -1,6 +1,6 @@
 <?php
-include_once("../Model/BlogModel.php");
-include_once("../Model/AccountModel.php");
+include_once("BlogModel.php");
+include_once("AccountModel.php");
 class UserProfile extends Account
 {
     public function get_name_and_img_user_by_id($id)

@@ -1,6 +1,6 @@
 <?php
 // router.php
-include_once("../Model/UserProfileModel.php");
+include_once("Model/UserProfileModel.php");
 $userprofile = new UserProfile();
 $role_id = $userprofile->get_role_id();
 

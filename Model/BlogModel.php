@@ -1,5 +1,5 @@
 <?php
-include_once("../Model/ConnectDataBase.php");
+include_once("ConnectDataBase.php");
 class Blog extends Connection
 {
     public function getProducts()
